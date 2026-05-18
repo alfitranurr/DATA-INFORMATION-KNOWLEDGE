@@ -12,6 +12,7 @@ Media sosial kini telah menjelma menjadi ruang publik digital utama bagi masyara
 Melalui konten edukasi finansial dan analisis makroekonomi yang diunggah pada kanal YouTube Raymond Chin, isu Danantara memicu respons yang masif. Ribuan opini netizen dari berbagai latar belakang berkumpul di kolom komentar. Proyek ini hadir sebagai solusi berbasis data (*data-driven*) untuk menangkap suara publik tersebut, melakukan pemrosesan data tekstual dalam skala besar, serta mengekstrak wawasan (*insight*) kuantitatif mengenai tingkat penerimaan publik, kecemasan sistemis, dan harapan warga Indonesia terhadap masa depan Danantara.
 
 * **Video Referensi Utama:** [Raymond Chin - Danantara Indonesia](https://www.youtube.com/watch?v=Tl6fDFA4xNI)
+* **Repositori Proyek:** [GitHub alfitranurr - Danantara](https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE/tree/main/Youtube/Danantara)
 
 ### 1.2 Tujuan Proyek
 1. **Otomatisasi Penambangan Data (Data Scraping):** Membangun skrip pipeline penarikan data komentar secara masif dari beberapa video YouTube bertopik spesifik secara *real-time* dengan memanfaatkan YouTube Data API v3.
@@ -137,8 +138,8 @@ Pastikan perangkat lokal Anda telah terpasang:
 
 1. **Clone Repositori Proyek:**
 ```bash
-git clone [https://github.com/alfitranurr/analisis-sentimen-danantara.git](https://github.com/alfitranurr/analisis-sentimen-danantara.git)
-cd analisis-sentimen-danantara
+git clone [https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE.git](https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE.git)
+cd DATA-INFORMATION-KNOWLEDGE/Youtube/Danantara
 
 ```
 
@@ -168,13 +169,13 @@ MONGO_URI=mongodb://localhost:27017/
 ### Langkah 1: Ekstraksi Data & Ingesti ke Database (Extract & Load)
 
 1. Jalankan aplikasi MongoDB Server Anda di latar belakang.
-2. Buka notebook `notebooks/Scrapped_Youtube_Data.ipynb`.
+2. Buka notebook `Scrapped_Youtube_Data.ipynb`.
 3. Inisialisasi variabel API Key dengan kredensial Anda.
 4. Eksekusi seluruh sel (*cells*). Skrip akan melakukan hit API ke YouTube, menarik total **1.758 komentar**, memformatnya menjadi dokumen database, dan menyimpannya secara otomatis ke dalam database MongoDB.
 
 ### Langkah 2: Preprocessing, Analisis, dan Pemodelan (Transform)
 
-1. Buka notebook `notebooks/SentimentAnalysis_Danantara.ipynb`.
+1. Buka notebook `SentimentAnalysis_Danantara.ipynb`.
 2. Skrip akan memanggil fungsi interkoneksi database untuk membaca koleksi data mentah dari MongoDB.
 3. Jalankan blok *cleansing* teks untuk mengeksekusi penyaringan karakter, penghapusan spam iklan, penyelarasan kata tidak baku (*slang*), dan pelabelan otomatis berbasis *InSet Lexicon*.
 4. Jalankan sel ekstraksi fitur TF-IDF dan algoritma klasifikasi SVM untuk menghasilkan pembobotan fitur kata kunci terkuat.
