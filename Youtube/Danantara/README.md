@@ -1,6 +1,3 @@
-Berikut adalah isi file `README.md` lengkap, sangat detail, dan terstruktur secara profesional yang bisa langsung Anda salin (*copy-paste*) ke repositori GitHub Anda.
-
-```markdown
 # 📊 Analisis Sentimen Komentar YouTube Warga Indonesia terhadap Danantara Indonesia (Pipeline ELT)
 
 Proyek ini mengimplementasikan pipeline data berbasis **ELT (Extract, Load, Transform)** untuk mengumpulkan, mengelola, membersihkan, dan menganalisis opini serta sentimen masyarakat Indonesia terhadap pembentukan **Danantara (Badan Pengelola Investasi Daya Anagata Nusantara)**. Data diekstraksi dari kolom komentar video YouTube Raymond Chin menggunakan **YouTube Data API v3**, disimpan ke dalam database NoSQL **MongoDB**, dan dianalisis menggunakan metode gabungan **InSet Lexicon-Based** serta **Support Vector Machine (SVM) dengan TF-IDF**.
@@ -219,7 +216,3 @@ Hasil analisis sentimen ini bertindak sebagai indikator sinyal awal (*early warn
 * **Mata Kuliah / Kelas:** Data, Information, and Knowledge B
 * **Program Studi:** Informatika
 * **Institusi:** Universitas Muhammadiyah Malang (UMM)
-
-```
-
-```
