@@ -137,7 +137,7 @@ Pastikan perangkat lokal Anda telah terpasang:
 
 1. **Clone Repositori Proyek:**
 ```bash
-git clone [https://github.com/username/analisis-sentimen-danantara.git](https://github.com/username/analisis-sentimen-danantara.git)
+git clone [https://github.com/alfitranurr/analisis-sentimen-danantara.git](https://github.com/alfitranurr/analisis-sentimen-danantara.git)
 cd analisis-sentimen-danantara
 
 ```
