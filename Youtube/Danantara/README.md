@@ -11,6 +11,8 @@ Media sosial kini telah menjelma menjadi ruang publik digital utama bagi masyara
 
 Melalui konten edukasi finansial dan analisis makroekonomi yang diunggah pada kanal YouTube Raymond Chin, isu Danantara memicu respons yang masif. Ribuan opini netizen dari berbagai latar belakang berkumpul di kolom komentar. Proyek ini hadir sebagai solusi berbasis data (*data-driven*) untuk menangkap suara publik tersebut, melakukan pemrosesan data tekstual dalam skala besar, serta mengekstrak wawasan (*insight*) kuantitatif mengenai tingkat penerimaan publik, kecemasan sistemis, dan harapan warga Indonesia terhadap masa depan Danantara.
 
+* **Video Referensi Utama:** [Raymond Chin - Danantara Indonesia](https://www.youtube.com/watch?v=Tl6fDFA4xNI)
+
 ### 1.2 Tujuan Proyek
 1. **Otomatisasi Penambangan Data (Data Scraping):** Membangun skrip pipeline penarikan data komentar secara masif dari beberapa video YouTube bertopik spesifik secara *real-time* dengan memanfaatkan YouTube Data API v3.
 2. **Arsitektur Penyimpanan Terpusat (Data Ingestion):** Mengelola penyimpanan data mentah (*raw data*) berformat semi-terstruktur ke dalam basis data NoSQL MongoDB demi menjamin skalabilitas dan performa integritas data.
@@ -66,7 +68,7 @@ Proyek ini mengadopsi paradigma desain **ELT (Extract, Load, Transform)**. Pende
 * Menggunakan modul `google-api-python-client` untuk membuat koneksi terotentikasi melalui token Developer API Key.
 * Mengimplementasikan fungsi iterasi `getcomments(video_id)` yang secara rekursif melacak parameter `nextPageToken` untuk mengekstrak seluruh halaman komentar tanpa batasan limit default.
 * Ekstraksi menyasar data metadata esensial: `author` (nama akun), `updated_at` (stempel waktu), `like_count` (jumlah disukai), `text` (konten teks komentar mentah), `video_id`, dan status `public`.
-* Video target mencakup 5 ID video utama Raymond Chin yang membahas Danantara secara intensif, antara lain: `TYxqBTdOq24`, `QOcP5OvSwlI`, `Lfzu74XDyco`, `TiS6vnju_mI`, dan `cYwioeHu_OU`.
+* Video target mencakup ID video utama Raymond Chin yang membahas Danantara secara intensif, antara lain: `Tl6fDFA4xNI`, `TYxqBTdOq24`, `QOcP5OvSwlI`, `Lfzu74XDyco`, `TiS6vnju_mI`, dan `cYwioeHu_OU`.
 
 
 2. **Load (Pemuatan):**
